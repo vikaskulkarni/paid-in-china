@@ -1,0 +1,91 @@
+button:focus {
+  outline: 0;
+}
+
+.radial {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background: #e05238;
+  border-radius: 50%;
+  transition: all 0.5s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fab {
+  border: none;
+  color: white;
+  background-color: #e05238;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: darken(#e05238, 15);
+  }
+}
+
+#plus {
+  transition: all 0.5s;
+  margin-top: 7px;
+}
+
+#fa-hs,
+#fa-invoice,
+#fa-comments,
+#fa-chart {
+  position: fixed;
+  background: transparent;
+  border: none;
+  right: 50px;
+  bottom: 50px;
+  transition: all 0.5s;
+  color: white;
+  &:hover {
+    color: lighten(#e05238, 15);
+  }
+}
+
+// #fa-hs:focus {
+//   color: lighten(#e05238, 15);
+// }
+
+.radial {
+  &.open {
+    height: 375px;
+    width: 375px;
+    right: -120px;
+    bottom: -120px;
+
+    .fab {
+      background-color: darken(#e05238, 15);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+        0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #plus {
+      transform: rotateZ(135deg) translate(-1px, 3px);
+    }
+    #fa-comments {
+      transition-delay: 0s;
+      transform: translate(-110px, 30px);
+    }
+    #fa-invoice {
+      transition-delay: 0.3s;
+      transform: translate(-40px, -100px);
+    }
+    #fa-hs {
+      transition-delay: 0.4s;
+      transform: translate(40px, -110px);
+    }
+    #fa-chart {
+      transition-delay: 0.2s;
+      transform: translate(-85px, -40px);
+    }
+  }
+}

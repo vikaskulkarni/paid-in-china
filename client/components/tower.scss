@@ -1,0 +1,101 @@
+.card {
+  background-color: #ffffff;
+  height: 200px;
+  margin: 3rem;
+  position: relative;
+  transition: transform 0.5s ease;
+  width: 220px;
+  border: none;
+  .content {
+    background-color: #ffffff;
+    color: #777777;
+    height: 200px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  .content:before {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2)
+    );
+    bottom: 0;
+    content: "";
+    height: 200px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .img-box {
+    background-color: #e05238;
+    align-items: center;
+    border-radius: 0 0 35%;
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    img {
+      max-width: 100px;
+    }
+    h4 {
+      color: #ffffff;
+      margin-top: 10px;
+      position: relative;
+    }
+  }
+}
+.card:before {
+  height: 15px;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  width: 100%;
+}
+.card:nth-child(1) {
+  z-index: 3;
+}
+.card:nth-child(2) {
+  z-index: 2;
+}
+.card:nth-child(3) {
+  z-index: 1;
+}
+.card:after {
+  border-bottom: 200px solid #bfbfbf;
+  height: 50%;
+  left: -15px;
+  transform: skewY(45deg);
+  transform-origin: left;
+  width: 15px;
+}
+
+.card:before,
+.card:after {
+  background-color: #df4a30;
+  content: "";
+  position: absolute;
+  top: -15px;
+}
+.card:hover,
+.card:focus,
+.card:active {
+  transform: translateY(-55px);
+}
+
+.card .card:hover .content:before,
+.card:focus .content:before,
+.card:active .content:before {
+  filter: blur(5px);
+  opacity: 0.5;
+  transform: translateY(55px) skewX(45deg);
+}

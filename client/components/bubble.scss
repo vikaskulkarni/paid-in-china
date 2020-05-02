@@ -1,0 +1,36 @@
+.bubble-agree {
+  position: fixed;
+  font-size: 0.8rem;
+  font-style: italic;
+  bottom: 175px;
+  right: 5px;
+  width: 270px;
+  padding: 50px 40px;
+  margin: 1em auto 80px;
+  text-align: center;
+  color: var(--accent-color);
+  background: linear-gradient(#efaf8f, #f4997b);
+  border-radius: 220px / 120px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 195px;
+    width: 30px;
+    height: 30px;
+    background: #f7b6a1;
+    border-radius: 30px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -45px;
+    left: 215px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #fbdbd0;
+  }
+}
