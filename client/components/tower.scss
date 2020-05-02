@@ -1,6 +1,6 @@
 .card {
   background-color: #ffffff;
-  height: 200px;
+  height: 16.5rem;
   margin: 3rem;
   position: relative;
   transition: transform 0.5s ease;
@@ -9,7 +9,6 @@
   .content {
     background-color: #ffffff;
     color: #777777;
-    height: 200px;
     padding: 20px;
     position: relative;
     text-align: center;
@@ -72,7 +71,6 @@
 }
 .card:after {
   border-bottom: 200px solid #bfbfbf;
-  height: 50%;
   left: -15px;
   transform: skewY(45deg);
   transform-origin: left;
