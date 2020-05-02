@@ -73,6 +73,26 @@
   }
 }
 
+.stamp {
+  margin-left: 60px;
+  margin-top: -40px;
+  z-index: 1;
+  height: 55px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-family: "Courier";
+}
+
+.is-nope {
+  color: #d23;
+  border: 0.5rem double #d23;
+  transform: rotate(25deg);
+  font-size: 1.3rem;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0;

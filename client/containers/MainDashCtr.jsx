@@ -1,22 +1,8 @@
-import React, { Fragment, Component } from "react";
-import TotalExpenses from "../components/TotalExpenses";
-import Tower from "../components/Tower";
+import { connect } from "react-redux";
+import MainDashCmp from "../components/MainDashCmp";
 
-class MainDashCtr extends Component {
-  render() {
-    return (
-      <Fragment>
-        <div className="row">
-          <TotalExpenses />
-        </div>
-        <div className="row">
-          {this.props.towers.map((element, index) => (
-            <Tower key={element.title + index} {...element} />
-          ))}
-        </div>
-      </Fragment>
-    );
-  }
-}
+const mapStateToProps = (state) => ({
+  towers: state.towersReducer.towers,
+});
 
-export default MainDashCtr;
+export const MainDashCtr = connect(mapStateToProps, {})(MainDashCmp);

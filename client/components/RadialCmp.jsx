@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from "react";
+import ExpenseForm from "./ExpenseForm";
+import BubbleAgreement from "./BubbleAgreement";
 import "./radial.scss";
 
-class Radial extends Component {
+class RadialCmp extends Component {
   render() {
     return (
       <Fragment>
@@ -19,9 +21,18 @@ class Radial extends Component {
             <div className="fa fa-radiation fa-3x" id="plus"></div>
           </button>
         </div>
+        {(this.props.ifShowAgreement || this.props.ifShowForm) && (
+          <button
+            className="fa fa-times-circle close"
+            id="faClose"
+            onClick={this.props.hideForm}
+          ></button>
+        )}
+        {this.props.ifShowForm && <ExpenseForm />}
+        {this.props.ifShowAgreement && <BubbleAgreement />}
       </Fragment>
     );
   }
 }
 
-export default Radial;
+export default RadialCmp;

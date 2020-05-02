@@ -89,3 +89,13 @@ button:focus {
     }
   }
 }
+
+.close {
+  position: fixed;
+  right: 75px;
+  bottom: 205px;
+}
+
+.close:not(:disabled):not(.disabled):hover {
+  color: darkred;
+}
