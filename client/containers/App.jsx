@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
-import { MainDashCtr } from "./MainDashCtr";
+import { MainDashCtr, RadialCtr } from "./CombinedContainers";
 import "./app.scss";
-import { RadialCtr } from "./RadialCtr";
 
 const App = () => (
   <Fragment>
