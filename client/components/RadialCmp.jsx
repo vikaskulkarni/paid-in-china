@@ -17,19 +17,32 @@ class RadialCmp extends Component {
             ></button>
           ))}
 
+          {this.props.ifShowAgreement && (
+            <button
+              className="fa fa-times fa-2x"
+              id="fa-hs"
+              onClick={this.props.hideForm}
+              style={{ color: "black" }}
+            ></button>
+          )}
+
+          {this.props.ifShowForm && (
+            <button
+              className="fa fa-times fa-2x"
+              id="fa-invoice"
+              onClick={this.props.hideForm}
+              style={{
+                color: "black",
+              }}
+            ></button>
+          )}
+
           <button className="fab">
             <div className="fa fa-radiation fa-3x" id="plus"></div>
           </button>
         </div>
-        {(this.props.ifShowAgreement || this.props.ifShowForm) && (
-          <button
-            className="fa fa-times-circle close"
-            id="faClose"
-            onClick={this.props.hideForm}
-          ></button>
-        )}
-        {this.props.ifShowForm && <ExpenseForm />}
-        {this.props.ifShowAgreement && <BubbleAgreement />}
+        {this.props.ifShowForm && <ExpenseForm {...this.props} />}
+        {this.props.ifShowAgreement && <BubbleAgreement {...this.props} />}
       </Fragment>
     );
   }

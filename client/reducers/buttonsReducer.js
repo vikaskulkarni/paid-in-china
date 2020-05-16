@@ -11,12 +11,12 @@ const initialState = {
       actionName: "showForm",
     },
     {
-      faIcon: "fa-comment-dots fa-3x",
+      faIcon: "fa-comment-dots fa-3x disabledd",
       faID: "fa-comments",
       actionName: "",
     },
     {
-      faIcon: "fa-chart-line fa-3x",
+      faIcon: "fa-chart-line fa-3x disabledd",
       faID: "fa-chart",
       actionName: "",
     },

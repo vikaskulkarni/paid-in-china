@@ -251,3 +251,13 @@
   width: 5em;
   position: relative;
 }
+
+.close {
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+}
+
+.close:not(:disabled):not(.disabled):hover {
+  color: darkred;
+}

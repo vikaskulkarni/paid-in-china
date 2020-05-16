@@ -4,6 +4,7 @@
     <title>
       Paid in China
     </title>
+    <meta name="viewport" id="viewport_device" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -30,6 +31,20 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      if (
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/IEMobile/i)
+      ) {
+        $("#viewport_device").attr("content", "initial-scale = 0.50");
+      } else if (navigator.userAgent.match(/iPad/i)) {
+        $("#viewport_device").attr("content", "initial-scale = 1.00");
+      }
+    </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"

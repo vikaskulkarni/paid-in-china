@@ -5,7 +5,7 @@ import "./app.scss";
 const App = () => (
   <Fragment>
     <RadialCtr />
-    <div className="container">
+    <div className="container-fluid">
       <MainDashCtr />
     </div>
   </Fragment>

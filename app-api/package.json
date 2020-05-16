@@ -1,0 +1,30 @@
+{
+  "name": "notes19-api",
+  "version": "1.0.0",
+  "description": "Notes CRUD Node.js for the Serverless APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-runtime": "^6.26.0",
+    "source-map-support": "^0.5.16",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-stage-3": "^7.8.3",
+    "aws-sdk": "^2.656.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-source-map-support": "^2.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "serverless-offline": "^6.1.4",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.42.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

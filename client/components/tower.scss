@@ -87,7 +87,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  transform: translateY(-55px);
+  transform: translateY(-35px);
 }
 
 .card .card:hover .content:before,
@@ -95,5 +95,5 @@
 .card:active .content:before {
   filter: blur(5px);
   opacity: 0.5;
-  transform: translateY(55px) skewX(45deg);
+  transform: translateY(35px) skewX(45deg);
 }

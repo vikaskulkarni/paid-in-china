@@ -16,7 +16,6 @@ const settings = {
   output: {
     filename: "[name].js",
     path: resolve(__dirname, "..", "dist"),
-    chunkFilename: "[name].js",
     publicPath: "/",
   },
   optimization: !isProduction

@@ -33,4 +33,12 @@
     border-radius: 15px;
     background: #fbdbd0;
   }
+
+  .close1 {
+    position: absolute;
+  }
+
+  .close1:not(:disabled):not(.disabled):hover {
+    color: darkred;
+  }
 }

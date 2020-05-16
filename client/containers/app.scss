@@ -1,8 +1,10 @@
 body {
   background-color: #f3f3f3;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.container {
+.container-fluid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
