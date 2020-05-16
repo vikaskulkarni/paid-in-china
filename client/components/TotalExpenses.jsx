@@ -16,7 +16,7 @@ const TotalExpenses = (props) => {
         </h3>
 
         <div className="total-stats">
-          <div>
+          <div style={{ paddingRight: "15px" }}>
             <dt className="total-stat">Country</dt>
             <dd className="total-stat-number">
               $
@@ -25,7 +25,7 @@ const TotalExpenses = (props) => {
               {!allExpenses.countryTotal && `...`}
             </dd>
           </div>
-          <div>
+          <div style={{ paddingRight: "15px" }}>
             <dt className="total-stat">Bussiness</dt>
             <dd className="total-stat-number">
               $
@@ -34,7 +34,7 @@ const TotalExpenses = (props) => {
               {!allExpenses.bussinessTotal && `...`}
             </dd>
           </div>
-          <div>
+          <div style={{ paddingRight: "15px", marginRight: "15px" }}>
             <dt className="total-stat">Personal</dt>
             <dd className="total-stat-number">
               $
