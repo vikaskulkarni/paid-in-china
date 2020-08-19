@@ -16,7 +16,7 @@ const allReducers = (requireContext) => {
   return requireContext.keys().reduce(
     (reducers, reducer) => ({
       ...reducers,
-      // Extract of the name of the file as the reducer name without extension
+      // Extract the name of the file as the reducer name without extension
       [reducer.substr(2).slice(0, -3)]: requireContext(reducer).default,
     }),
     {}
@@ -25,7 +25,10 @@ const allReducers = (requireContext) => {
 
 let store;
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+if (
+  (!process.env.NODE_ENV || process.env.NODE_ENV === "development") &&
+  window.navigator.userAgent.includes("Chrome")
+) {
   store = createStore(
     combineReducers(allReducers(reducerModules)),
     compose(
